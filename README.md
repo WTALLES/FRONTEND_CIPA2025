@@ -1,59 +1,56 @@
-# CIPA2025
+📌 Sobre o projeto
+Este é o frontend da aplicação CIPA, desenvolvido em Angular.
+Ele fornece a interface para gerenciamento de eleições, cadastramento de candidatos, geração de senhas de votação, processo de votação e visualização da apuração.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+🚀 Funcionalidades
+Interface administrativa para eleições e candidatos
 
-## Development server
+Geração e impressão de senhas de votação
 
-To start a local development server, run:
+Simulação de urna eletrônica para votação
 
-```bash
-ng serve
-```
+Apuração em tempo real
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Visualização das fotos dos candidatos
 
-## Code scaffolding
+📋 Pré-requisitos
+Antes de iniciar, você precisa ter instalado:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Node.js (versão LTS recomendada)
 
-```bash
-ng generate component component-name
-```
+NPM
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Angular CLI (se não quiser usar npx)
 
-```bash
-ng generate --help
-```
+bash
+npm install -g @angular/cli
+⚙️ Configuração
+Clonar o repositório
 
-## Building
+bash
+git clone <seu_repositorio_frontend>
+cd frontend
+Instalar dependências
 
-To build the project run:
+bash
+npm install
+Configurar URL da API
+No arquivo src/app/services/cipa.ts:
 
-```bash
-ng build
-```
+ts
+private apiUrl = 'http://SEU_IP_LOCAL:3000/api';
+E nas variáveis para imagens (ex: backendUrl nos componentes):
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+ts
+backendUrl = 'http://SEU_IP_LOCAL:3000';
+▶️ Executar o frontend
+Para rodar e permitir acesso de outros dispositivos na rede:
 
-## Running unit tests
+bash
+ng serve --host 0.0.0.0 --port 4200
+O frontend ficará disponível em:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+text
+http://localhost:4200      (apenas no seu PC)
+http://SEU_IP_LOCAL:4200   (qualquer dispositivo da sua rede)
+✅ Dica final: Coloque o IP da sua máquina no lugar de SEU_IP_LOCAL para que outros dispositivos da rede (celulares, tablets, outros PCs) possam usar a aplicação completa, incluindo exibição das imagens.#
